@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-smooth: always;
+}
+
+.main-container {
+    display: flex;
+    gap: 100px;
+    padding: 0 0 0 200px;
+}
+
+.gol-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.gol-controls {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gol-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #F95E1C;
+    color: #fff;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.gol-field {
+    border: 1px solid #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gol-cell {
+    width: 45px;
+    height: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1D1D1D;
+    cursor: pointer;
+}
+
+.gol-cell-dead {
+    background: #fff;
+}
+
+.gol-cell-alive {
+    background: #1D1D1D;
+    color: #fff;
+}
+
+.gol-cell-newborn {
+    background: #F95E1C;
+}
+
+.gol-indicator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+.gol-indicator-dot {
+    width: 6px;
+    height: 6px;
+    background: #1D1D1D;
+    border-radius: 10px;
+}
+
+.gol-indicator-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gol-button-muted {
+    background: #dad9d9;
+}
+
+.gol-indicator-dot-active {
+    background: #F95E1C;
+}
+
+.gol-indicator-dot-muted {
+    background: #1D1D1D;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 1400px) {
+    .main-container {
+        padding: 0 0 0 50px;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .main-text {
+        justify-content: unset;
+    }
+
+    .gol-controls {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 900px) {
+    .gol-cell {
+        width: 30px;
+        height: 30px;
+    }
+}

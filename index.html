@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gol-musical</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="gol-container">
+      <div class="gol-indicator" id="gol-indicator">
+        <div class="gol-indicator-dot" id="gol-indicator-dot"></div>
+        <span class="gol-indicator-text" id="gol-indicator-text">
+          Paused
+        </span>
+      </div>
+      <div class="gol-field" id="gol-field"></div>
+      <div class="gol-controls">
+        <button class="gol-button" id="gol-play">Play</button>
+        <button class="gol-button" id="gol-stop">Stop</button>
+        <button class="gol-button" id="gol-clear">Clear</button>
+        <button class="gol-button" id="gol-random">Randomize</button>
+        <select class="gol-button" id="gol-speed">
+          <option value="100">0.1s</option>
+          <option value="200">0.2s</option>
+          <option selected value="300">0.3s</option>
+          <option value="500">0.5s</option>
+          <option value="1000">1s</option>
+          <option value="2000">2s</option>
+        </select>
+      </div>
+    </div>
+    <div class="main-text">
+      <h1>Conway's Game of Life as a Musical Instrument</h1>
+      <p>This web demo was inspired by the following video</p>
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/b2SjVwYNr54?si=Nf-WtynfDjHPTGsl"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+      <p></p>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
