@@ -14,4 +14,4 @@ The original idea was found [here](https://youtu.be/b2SjVwYNr54?si=-Mkxz6Vw33AXS
 
 ## Sound
 
-Newborn cell are playing sound of the coresponding note on grid.
+Newborn cells play the sound of the corresponding note.
