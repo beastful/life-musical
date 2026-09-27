@@ -13,8 +13,7 @@ body {
 
 .main-container {
     display: flex;
-    gap: 100px;
-    padding: 0 0 0 200px;
+    justify-content: center;
 }
 
 .gol-container {
@@ -22,7 +21,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 30px 0;
 }
 
 .gol-controls {
@@ -60,7 +60,7 @@ body {
     height: 45px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,10 +113,18 @@ body {
     background: #1D1D1D;
 }
 
-.main-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.gol-info {
+    width: 100%;
+}
+
+.gol-info-header {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 30px 0 10px 0;
+}
+
+.gol-info-link {
+    color: #0277BD;
 }
 
 @media (max-width: 1400px) {
@@ -128,17 +136,12 @@ body {
 
 @media (max-width: 1200px) {
     .main-container {
-        flex-direction: column;
         padding: 10px;
         gap: 10px;
     }
 
-    .main-text {
-        justify-content: unset;
-    }
-
     .gol-controls {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 
