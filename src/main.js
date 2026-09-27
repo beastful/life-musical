@@ -2,19 +2,25 @@ import EventLite from 'event-lite'
 import * as Tone from "tone";
 import './style.css'
 
-const notes = [
-  ['B#9', 'C#9', 'D#9', 'E#9', 'F#4', 'G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4'],
-  ['G#8', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4', 'B#4', 'C#4'],
-  ['E#4', 'F#4', 'G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4'],
-  ['C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'B#4'],
-  ['A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4'],
-  ['F#4', 'G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'B#4', 'C#4', 'D#4', 'E#4'],
-  ['D#4', 'E#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4', 'B#4', 'C#4'],
-  ['B#4', 'C#4', 'D#4', 'E#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4'],
-  ['G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4'],
-  ['E1', 'F3', 'G3', 'A3', 'B3', 'C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4'],
-  ['C3', 'D3', 'E3', 'F#1', 'G#4', 'A#4', 'B#4', 'C#4', 'D#4', 'E#4', 'F#4'],
-]
+function roundindex(index, length) {
+  if (index >= length) {
+    return roundindex(index - length, length)
+  }
+  return index
+}
+
+const notes = []
+
+const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
+const numbers = [2, 3, 4, 5, 6]
+
+for (let i = 0; i <= 10; i++) {
+  notes[i] = []
+  for (let j = 0; j <= 10; j++) {
+    notes[i][j] = `${letters[roundindex(i + j, letters.length)]}#${numbers[roundindex(i + j, numbers.length)]}`
+  }
+}
 
 function neighbours(state, i, j) {
   let c = 0
